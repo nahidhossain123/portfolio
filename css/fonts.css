@@ -1,0 +1,16 @@
+/* @font face */
+
+@font-face{
+    font-family:"Roboto";
+    src:'../fonts/Roboto/Roboto-Regular.ttf';
+}
+
+@font-face{
+    font-family:"Charmonman";
+    src:'../fonts/Charmonman/Charmonman-Regular.ttf';
+}
+
+@font-face{
+    font-family:"Stick";
+    src:'../fonts/Stick/Stick-Regular.ttf';
+}

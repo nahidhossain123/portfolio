@@ -1,0 +1,683 @@
+@import url(./fonts.css);
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/*star logo section*/
+
+
+#sec1{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container a>img{
+    animation: LogoAnim 10s linear infinite;
+}
+
+@keyframes LogoAnim{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+
+/*end logo section*/
+
+/*Start Page transition*/
+
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #2d2c2a;
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/*End Page transition*/
+
+/*Start Parallax navbar*/
+.header-area i{
+    color: white!important;
+}
+
+.header-area a{
+    color: white;
+}
+
+.bg-image{
+    background: url('../images/Tariqual\ Main\ image\ 1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.header-area .navbar{
+    transition: 1s ease-in-out;
+}
+.nav-link{
+    position: relative;
+}
+.nav-link:after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transition: 0.5s;
+    content: "";
+    transform-origin: left;
+    background-color: white;
+}
+.nav-item a{
+    transition: 0.2s ease-in-out;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+.nav-item a:hover{
+    transform: rotate(30deg);
+}
+
+.nav-link:hover:after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.bg-image .myinfo{
+   position: absolute;
+   top: 35%;
+   left: 5%;
+   font-family: 'Sedgwick Ave Display', cursive;
+}
+.bg-image .myinfo h1 span{
+    font-size: 60px;
+    letter-spacing: 5px;
+    display: block;
+    padding: 20px 0;
+    font-size: 50px; 
+    text-transform: uppercase; 
+}
+.bg-image .myinfo h3 span{
+    color: rgb(221, 59, 59);
+    text-transform: uppercase;
+}
+
+.bg-image .myinfo>span{
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+.bg-image .myinfo h3{
+    letter-spacing: 10px;
+}
+
+
+/*End Parallax navbar*/
+
+/*Start Body Content Section*/
+
+.margin{
+    margin-top: 10em;
+}
+
+.border-line{
+    border-left: 1px solid rgb(34, 34, 34);
+    border-right: 1px solid rgb(34, 34, 34);
+    padding: 150px 0;
+}
+
+/*Start Portfolio*/
+.heading{
+    font-family: 'Sedgwick Ave Display', cursive;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline wavy;
+    text-transform: uppercase;
+    padding-bottom: 60px;
+}
+
+
+.container-gallery{
+    position: relative;
+    column-count: 3;
+    padding: 20px;
+}
+
+.image{
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.container-gallery img{
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.image:hover img{
+    transform:scale(1,1);
+    opacity: 0.5;
+}
+
+.container-gallery h1{
+    font-family: 'Sedgwick Ave Display', cursive;
+    position: absolute;
+    padding: 5px;
+    margin: 5px;
+    font-size: 25px;
+    color: #000000;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+}
+
+.container-gallery h5{
+    font-family: 'Sedgwick Ave Display', cursive;
+    position: absolute;
+    padding:35px 5px 5px 5px;
+    margin: 5px;
+    font-size: 18px;
+    color: #000000;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+    font-weight: normal;
+}
+
+.image:hover h1{
+    opacity: 0.5;
+    color: whitesmoke; 
+}
+.image:hover h5{
+    opacity: 0.5;
+    color: whitesmoke; 
+}
+
+@media screen and (max-width:768px)
+{
+    .container-gallery{
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width:425px)
+{
+    .container-gallery{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width:375px)
+{
+    .container-gallery{
+        column-count: 1;
+    }
+}
+
+
+
+/*End Portfolio*/
+
+/*Start Achievements*/
+.achivements-area .row{
+    padding: 0 30px;
+}
+
+
+.achievements{
+    border: 1px solid white;
+    text-align: center;
+    margin: 15px 0;
+    padding: 30px 20px;
+}
+
+.achievements>span{
+    display: block;
+    padding: 5px 0;
+}
+
+.achievements .number{
+    font-size: 60px;
+    color: rgb(228, 70, 22);
+    font-weight: bold;
+}
+
+.achievements .text{
+    color: gray;
+}
+
+/*End Achievements*/
+
+
+/*Start Skills*/
+.skills-area .number,.text{
+    font-family: 'Yeon Sung', cursive;
+}
+
+.skills{
+    text-align: center;
+    margin: 15px 0;
+    padding: 30px 0;
+}
+
+.skills>span{
+    display: block;
+    padding: 5px 0;
+}
+.skills .number{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*End Skills*/
+
+/*Experience Area*/
+.experience-area .name,.date{
+    font-family: 'Yeon Sung', cursive;
+}
+
+.experience-area .ex1{
+    padding-left: 50px;
+}
+.experience-area .ex2{
+    padding-right: 50px;
+}
+.experience-item{
+    background: rgb(20, 20, 20);
+    padding: 30px 30px;
+    border-radius: 5px;
+}
+
+
+.content{
+    margin-left: 20px;
+    padding-left: 13px; 
+    position: relative;
+}
+
+.content span.line{
+    position: absolute;
+    width: 1px;
+    background-color:#ff4c60;
+    top: 1px;
+    bottom: 1px;
+    left:-10px;
+    
+   
+}
+
+.ex-content::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0b1";
+    position: absolute;
+    margin-left: -30px;
+    display: inline-block;
+    color:#ff4c60;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased; 
+}
+
+/*End Experience area*/
+
+/*Start Education Area*/
+.education-area .date,.name{
+    font-family: 'Yeon Sung', cursive;
+}
+
+.edu{
+    padding: 0 50px;
+}
+
+
+.edu-content::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f19d";
+    position: absolute;
+    margin-left: -30px;
+    display: inline-block;
+    color:#ff4c60;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased; 
+}
+
+.edu-content>span{
+    display: block;
+}
+
+/*End Education Area*/
+
+
+/*Start About Area*/
+.about-area{
+    position: relative;
+}
+.about-area .row{
+    padding: 0 15px;
+}
+.about-area .ab-img{
+    border-top: 1px solid rgb(34, 34, 34);
+    border-bottom: 1px solid rgb(34, 34, 34);
+    border-right: 1px solid rgb(34, 34, 34);
+}
+
+.ab-content>h3,p{
+    margin-bottom: 30px;
+}
+
+.ab-content h3{
+    font-weight: bold;
+    font-family: 'Yeon Sung', cursive;
+}
+.para{
+    font-family: 'Sacramento', cursive;
+    text-align: justify;
+    color: rgb(226, 226, 226);
+    font-size: 20px;
+}
+
+/*End About Area*/
+
+
+/*Start Get In Touch*/
+.contact-wrapper{
+    width: 500px;
+    padding: 30px;
+}
+.contact-wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    
+}
+.contact-wrapper .input-data input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: whitesmoke;
+    border-bottom: 1px solid rgb(58, 58, 58);
+    outline: none;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-25px);
+    font-size: 13px;
+}
+.input-data textarea:focus ~ label,
+.input-data textarea:valid ~ label{
+    transform: translateY(-35px);
+    font-size: 13px;
+}
+
+.input-data label{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transition: all 0.3s ease;
+   font-family: 'Yeon Sung', cursive;
+}
+
+.input-data .underline{
+    position: absolute;
+    bottom: 0px;
+    height: 1px;
+    width: 100%;
+   
+} 
+
+.input-data .underline::before{
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transition: 0.3s ease;
+}
+
+.input-data input:focus ~ .underline::before,
+.input-data input:valid ~ .underline::before{
+    transform: scaleX(1);
+}
+
+.input-data textarea{
+    height: 70px;
+    width: 100%;
+    color: whitesmoke;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(58, 58, 58);
+    transition: 0.3s ease;
+}
+
+.input-data textarea:focus{
+    border-bottom: 1px solid rgb(255, 255, 255); 
+}
+
+.contact-text span{
+    color: rgb(97, 97, 97);
+    display: block;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.contact-text h5{
+    color: rgb(143, 143, 143);
+    font-weight: bold;
+}
+.contact-area .date,.name{
+    font-family: 'Yeon Sung', cursive;
+}
+
+/*End Get In Touch*/
+
+
+
+/*End Body Content Section*/
+
+
+/*Start Footer Area*/
+.footer-area{
+    background-color: #191919;
+    padding: 100px 60px 160px 60px;
+}
+.center-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-area .social-icon i{
+    padding: 40px 20px;
+}
+.footer-copyright p,.social-icon i{
+    color: gray;
+}
+
+.social-icon i:hover{
+    color: white;
+}
+
+/*End Footer Area*/
+
+
+/*Cursor Effect*/
+.cursor{
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: 0.3s ease;
+}
+
+.heading span:hover ~ .cursor{
+    transform: translate(-50%,-50%) scale(8);
+}
+/*End Cursor Effect*/
+
+/*Media Query*/
+
+@media (max-width:990px)
+{
+    .header-area .navbar-brand{
+        display: none;
+    }
+    .bg-image .myinfo{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+     }
+}
+@media (max-width:295px)
+{
+    
+    .bg-image .myinfo h1 span{
+        font-size: 25px; 
+        text-transform: uppercase;  
+    }
+
+    .bg-image .myinfo h3{
+        letter-spacing: 10px;
+        font-size: 15px;
+    }
+    .bg-image .myinfo>span{
+        font-size: 10px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+}
+@media (max-width:767px)
+{
+    .experience-area .ex1{
+        padding:50px 50px;
+    }
+    .experience-area .ex2{
+        padding:50px 50px;
+    }
+    
+}
+
+/*Start Image Preview */
+.crossbtn a{
+    float: right;
+}
+
+.image-container{
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.gallery-individual{
+    margin-top: 50px;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+}
+
+.gallery-individual .photo{
+    padding-top: 15px;
+}
+/*End Image Preview*/
+
+
+/*Reveal Animation*/
+
+.block-reveal{
+    --t:calc(var(--td) + var(--d));
+    color: transparent;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+    -webkit-animation: revealBlock 0s var(--t) forwards;
+    animation: revealBlock 0s var(--t) forwards;
+}
+.block-reveal::before{
+   content: '';
+   width: 0%;
+   height: 100%;
+   padding-bottom: 4px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: var(--bc);
+   -webkit-animation: revealingIn var(--td) var(--d) forwards,
+   revealingOut var(--td) var(--t) forwards;
+   animation: revealingIn var(--td) var(--d) forwards,
+   revealingOut var(--td) var(--t) forwards;
+   
+}
+
+@-webkit-keyframes revealBlock{
+    100% {
+        color:#d4d4d4;
+    }
+}
+@keyframes revealBlock{
+    100% {
+        color:#c3c3c3;
+    }
+}
+
+@-webkit-keyframes revealingIn{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes revealingIn{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes revealingOut{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes revealingOut{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+/*End Reveal Animation*/
